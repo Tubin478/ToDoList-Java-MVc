@@ -1,0 +1,10 @@
+CREATE DATABASE tareas;
+USE tareas;
+CREATE TABLE tareas (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  titulo VARCHAR(100) NOT NULL,
+  descripcion VARCHAR(255),
+  completada BOOLEAN DEFAULT FALSE,
+  fecha_creacion DATETIME DEFAULT CURRENT_TIMESTAMP,
+  fecha_completacion DATETIME
+);
