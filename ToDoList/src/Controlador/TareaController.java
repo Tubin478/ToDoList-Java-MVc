@@ -4,10 +4,6 @@
  */
 package Controlador;
 
-/**
- *
- * @author GP
- */
 public class TareaController {
     
 }

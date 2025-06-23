@@ -52,11 +52,28 @@ public class TareaForm extends javax.swing.JFrame {
 
         jLabel2.setText("Titulo:");
 
+        txtTitulo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTituloActionPerformed(evt);
+            }
+        });
+
         jLabel3.setText("Descripcion:");
+
+        txtDescripcion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDescripcionActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("Status:");
 
         txtStatus.setEditable(false);
+        txtStatus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtStatusActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelInformacionLayout = new javax.swing.GroupLayout(panelInformacion);
         panelInformacion.setLayout(panelInformacionLayout);
@@ -107,10 +124,25 @@ public class TareaForm extends javax.swing.JFrame {
         });
 
         btnVer.setText("Ver Tareas");
+        btnVer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVerActionPerformed(evt);
+            }
+        });
 
         btnMarcar.setText("Marcar realizada");
+        btnMarcar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMarcarActionPerformed(evt);
+            }
+        });
 
         btnEliminar.setText("Eliminar Tarea");
+        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelAccionesLayout = new javax.swing.GroupLayout(panelAcciones);
         panelAcciones.setLayout(panelAccionesLayout);
@@ -207,6 +239,30 @@ public class TareaForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAgregarActionPerformed
 
+    private void btnVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnVerActionPerformed
+
+    private void btnMarcarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMarcarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMarcarActionPerformed
+
+    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEliminarActionPerformed
+
+    private void txtTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTituloActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTituloActionPerformed
+
+    private void txtDescripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDescripcionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDescripcionActionPerformed
+
+    private void txtStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStatusActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtStatusActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -244,11 +300,11 @@ public class TareaForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable TableDatos;
-    private javax.swing.JButton btnAgregar;
-    private javax.swing.JButton btnEliminar;
-    private javax.swing.JButton btnMarcar;
-    private javax.swing.JButton btnVer;
+    public javax.swing.JTable TableDatos;
+    public javax.swing.JButton btnAgregar;
+    public javax.swing.JButton btnEliminar;
+    public javax.swing.JButton btnMarcar;
+    public javax.swing.JButton btnVer;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -257,8 +313,8 @@ public class TareaForm extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel panelAcciones;
     private javax.swing.JPanel panelInformacion;
-    private javax.swing.JTextField txtDescripcion;
-    private javax.swing.JTextField txtStatus;
-    private javax.swing.JTextField txtTitulo;
+    public javax.swing.JTextField txtDescripcion;
+    public javax.swing.JTextField txtStatus;
+    public javax.swing.JTextField txtTitulo;
     // End of variables declaration//GEN-END:variables
 }
