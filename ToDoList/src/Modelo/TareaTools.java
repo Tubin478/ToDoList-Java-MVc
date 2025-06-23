@@ -24,6 +24,39 @@ public class TareaTools extends TareaDataBase {
         } catch (SQLException e) {
             System.out.println("Ocurrio un error al agregar tarea");
             System.out.println(e);
+            return false;
+
+        } finally {
+            try {
+                if (ps != null) {
+                    ps.close();
+                }
+                if (conexion != null) {
+                    conexion.close();
+                }
+            } catch (SQLException e) {
+                System.out.println("Error al cerrar la conexión");
+                System.out.println(e);
+            }
+        }
+
+        return true;
+    }
+
+    public boolean eliminar(Tarea t) {
+        String consulta = "DELETE FROM tareas WHERE id";
+        Connection conexion = obtenerConexion();
+        PreparedStatement ps = null;
+        try {
+            ps = conexion.prepareStatement(consulta);
+            ps.setInt(1, t.getId());
+
+            ps.executeUpdate();
+
+        } catch (SQLException e) {
+            System.out.println("Ocurrio un error al eliminar tarea");
+            System.out.println(e);
+            return false;
 
         } finally {
             try {
