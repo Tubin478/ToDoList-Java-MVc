@@ -49,6 +49,11 @@ public class TareaController implements ActionListener {
         }
 
     }
+
+    public void verificarEstado(){
+
+        return "modulo para verificar un estado de tarea";
+    }
     
     //prueba comentario para commit sencillo
     
