@@ -93,7 +93,7 @@ public class TareaForm extends javax.swing.JFrame {
                     .addGroup(panelInformacionLayout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addGap(18, 18, 18)
-                        .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(84, Short.MAX_VALUE))
         );
         panelInformacionLayout.setVerticalGroup(
@@ -178,9 +178,17 @@ public class TareaForm extends javax.swing.JFrame {
 
             },
             new String [] {
-                "id", "titulo", "descripcion", "completada", "fecha_creacion", "fecha_completacion"
+                "ID", "Titulo", "Descripcion ", "Completada", "Fecha_Creacion", "Fecha_Finalizacion"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Boolean.class, java.lang.Object.class, java.lang.Object.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(TableDatos);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
